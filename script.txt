@@ -1,0 +1,29 @@
+# 1d time-dependent burgers (PINN)
+python main.py --eq=burgers --nc=10000 --nc_test=100 --ni=50 --nb=50 --lda=1 --n_layers=9 --in_size=2 --hidden_size=20 --out_size=1 --lr=1e-3 --epochs=50000 --model=pinn
+
+# 1d time-dependent burgers (SPINN)
+python main.py --eq=burgers --nc=400 --nc_test=100 --ni=200 --nb=200 --lda=10 --n_layers=5 --in_size=1 --hidden_size=19 --out_size=19 --lr=2.5e-3 --epochs=50000 --model=spinn
+
+# 2d time-independent helmholtz (PINN)
+python main.py --eq=helmholtz2d --a1=4 --a2=1 --nc=10000 --ni=50 --nb=50 --nc_test=100 --n_layers=4 --in_size=2 --hidden_size=50 --out_size=1 --lr=1e-3 --epochs=50000 --model=pinn
+
+# 2d time-independent helmholtz (SPINN)
+python main.py --eq=helmholtz2d --a1=4 --a2=1 --nc=400 --ni=200 --nb=200 --nc_test=100 --n_layers=4 --in_size=1 --hidden_size=29 --out_size=29 --lr=1e-3 --epochs=50000 --model=spinn
+
+# 3d time-independent helmholtz (PINN)
+python main.py --eq=helmholtz3d --a1=1 --a2=2 --a3=2 --nc=1000000 --ni=50 --nb=50 --nc_test=50 --n_layers=6 --in_size=3 --hidden_size=80 --out_size=1 --lr=1e-3 --epochs=50000 --model=pinn
+
+# 3d time-independent helmholtz (SPINN)
+python main.py --eq=helmholtz3d --a1=1 --a2=2 --a3=2 --nc=400 --ni=200 --nb=200 --nc_test=50 --n_layers=5 --in_size=1 --hidden_size=46 --out_size=46 --lr=1e-3 --epochs=50000 --model=spinn
+
+# 2d time-dependent heat (PINN)
+python main.py --eq=heat --nc=100 --nc_test=101 --n_layers=6 --in_size=3 --hidden_size=87 --out_size=1 --lr=1e-3 --epochs=50000 --model=pinn
+
+# 2d time-dependent heat (SPINN)
+python main.py --eq=heat --nc=100 --nc_test=101 --n_layers=5 --in_size=1 --hidden_size=50 --out_size=50 --lr=1e-3 --epochs=50000 --model=spinn
+
+# 2d time-dependent diffusion (PINN)
+python main.py --eq=diffusion --nc=100 --nc_test=101 --n_layers=5 --in_size=3 --hidden_size=100 --out_size=1 --lr=1e-3 --epochs=50000 --model=pinn
+
+# 2d time-dependent diffusion (SPINN)
+python main.py --eq=diffusion --nc=100 --nc_test=101 --n_layers=5 --in_size=1 --hidden_size=50 --out_size=50 --lr=1e-3 --epochs=50000 --model=spinn
